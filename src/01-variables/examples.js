@@ -42,8 +42,13 @@ ejemplo();
 // Comparar let y const en un vistazo
 let contador = 0;
 contador += 1; // ok
+contador++;
+console.log(`Contador: ${contador}`);
+
 let texto = "hola";
+console.log(`Texto 1: ${texto}`);
 texto = "adiós"; // ok
+console.log(`Texto 2: ${texto}`);
 
 const MAX = 100;
 // MAX = 200; // TypeError
@@ -51,3 +56,4 @@ const MAX = 100;
 const lista = [1, 2];
 lista.push(3); // ok — mismo array
 // lista = []; // TypeError
+console.log(`Lista: ${lista}`);
