@@ -6,15 +6,16 @@
 después; con `const` la segunda asignación daría `TypeError`.
 
 ```js
-let nombre = "Ana";
+let nombre = "Hugo";
 console.log(nombre);
-nombre = "Luis";
+
+nombre = "Déborah"
 console.log(nombre);
 ```
 
 ```txt
-Ana
-Luis
+Hugo
+Déborah
 ```
 
 ## Ejercicio 2 · Constante `PI`
