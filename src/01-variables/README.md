@@ -32,8 +32,7 @@ const PI = 3.1416;
 console.log(PI);
 ```
 
-```js
-/*
+```txt
 ..\exercises.js:16
 PI = 3;
    ^
@@ -47,5 +46,22 @@ TypeError: Assignment to constant variable.
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
     at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
     at node:internal/main/run_main_module:33:47
-*/
 ```
+
+## Ejercicio 3 · Variable sin inicializar
+**Explicación.** JavaScript permite tener datos sin ningún valor, llegado el caso éstos tendrán el valor `undefined` que es lo que vemos a simple vista con el código:
+
+```js
+let edad;
+console.log(edad);
+
+edad = 37;
+console.log(edad);
+```
+
+```txt
+undefined
+37
+```
+
+Pero tenemos que aprender que éstos datos si quedan preparados para usarse y ya entran en memoria.
