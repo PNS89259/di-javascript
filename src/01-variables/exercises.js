@@ -83,3 +83,22 @@ const lista = [1, 2];
 lista.push(3);
 console.log(lista);
 // lista = []; // Va a fallar por intentar tocar la referencia de memoria siendo const
+
+/* Para pensar. 7. Estas variables tienen nombres inútiles. Renómbralas 
+siguiendo la convención camelCase de forma que el nombre diga qué 
+contienen.
+*/
+console.log("\nPara pensar. Ejercicio 7:");
+/*
+let a = "Ana";
+let b = 30;
+let c = true;
+let d = 1250.5;
+*/
+let nombreEmpleado = "Ana";
+let edadEmpleado= 30;
+let deBaja = true;
+let salarioBase = 1250.5;
+
+console.log(`Empleado: ${nombreEmpleado}\nEdad: ${edadEmpleado}\n¿De baja? ${deBaja}\nSalario Base: ${salarioBase}`)
+

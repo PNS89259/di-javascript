@@ -114,3 +114,23 @@ lista = [];
 El array de la primera línea lo declaramos como constante, y el array se guarda como referencia, que es un enlace en la memoria, y será éste enlace lo que será inmutable. Dicho ésto, lo que sucede en las líneas 2 y 3 es algo que sí podemos hacer, ya que el contenido del array sí puede ser modificado porque no modifica el enlace que mencionamos, sólo su contenido.
 
 Ahora, la última línea si está intentando modificar la referencia, el enlace a la memoria, y como es una constante y es inmutable nos saltará error.
+
+## Para pensar. Ejercicio 7 · Nombre variavles y CamelCase
+**Explicación.** Para que un código sea entendible tenemos que ser específicos con los nombres de las variables y olvidarnos lo de querer ahorrar líneas sacrificando el acortar código. debemos pensar que es muy raro que trabajemos solos en proyectos, y nuestro código será leído por más personas, por lo que tiene que quedar claro qué es cada cosa.
+
+Eso no nos quita de que escribamos como nos dé la gana, existen convenciones para nombrar variables, clases, proyectos, nombres de archivos... A las variables las trabajaremos con CamelCase, que es el formato donde la variable empezará en minúscula y si es una palabra compuesta por dos o más éstas se unirán empezando por su primera letra en mayúsucula a la variable.
+
+Para el ejemplo del ejercicio, me he basado en los datos que tendría una empresa sobre sus empleados, comparemos las diferencias:
+```js
+let a = "Ana";
+let b = 30;
+let c = true;
+let d = 1250.5;
+```
+
+```js
+let nombreEmpleado = "Ana";
+let edadEmpleado= 30;
+let deBaja = true;
+let salarioBase = 1250.5;
+```
