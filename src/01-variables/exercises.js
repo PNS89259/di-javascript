@@ -46,3 +46,20 @@ console.log(edad);
 
 edad = 37;
 console.log(edad);
+
+/* 4. Declara precioBase con valor 100, iva con 0.21 y calcula precioFinal. 
+Decide para cada una si debe ser let o const y justifícalo en un 
+comentario.
+*/
+console.log("\nEjercicio 4:");
+/* Uso const uno por el valor fijo del enunciado, y dos porque si debiera
+de cambiar por la lógica ya dependería de operaciones que no tengo que
+pensar aquí. */
+const precioBase = 100;
+// Para el iva uso el const, si se usa no va a variar en la lógica
+const iva = 0.21;
+/* el precio final lo pongo const porque va ser una fórmula que usemos
+a partir de las otras variables. */
+const precioFinal = precioBase + (precioBase * iva);
+
+console.log(`Precio final: ${precioFinal}`);

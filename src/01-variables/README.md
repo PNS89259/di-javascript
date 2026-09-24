@@ -65,3 +65,22 @@ undefined
 ```
 
 Pero tenemos que aprender que éstos datos si quedan preparados para usarse y ya entran en memoria.
+
+## Ejercicio 4 · Justificación entre `let` y `const`
+**Explicación.** Aquí tenemos que aprender que no todo siempre va a ser normas estrictas. Debemos pensar la lógica de lo que vamos a escribir. 
+
+En este caso el precio base se nos viene dado y lo usaremos en operaciones en las que no se va a modificar, por lo que lo declaramos como `const.`. De la misma manera, el IVA será un valor que no varía en los cálcular, también `const`. Y por último, el precio final es una opración que tampoco vamos a tocar en el código, así que otra `const`. Por lo tanto, vemos tres conceptos donde aplicar constantes.
+
+```js
+/* Uso const uno por el valor fijo del enunciado, y dos porque si debiera
+de cambiar por la lógica ya dependería de operaciones que no tengo que
+pensar aquí. */
+const precioBase = 100;
+// Para el iva uso el const, si se usa no va a variar en la lógica
+const iva = 0.21;
+/* el precio final lo pongo const porque va ser una fórmula que usemos
+a partir de las otras variables. */
+const precioFinal = precioBase + (precioBase * iva);
+
+console.log(`Precio final: ${precioFinal}`);
+```
