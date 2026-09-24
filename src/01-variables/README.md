@@ -115,7 +115,7 @@ El array de la primera línea lo declaramos como constante, y el array se guarda
 
 Ahora, la última línea si está intentando modificar la referencia, el enlace a la memoria, y como es una constante y es inmutable nos saltará error.
 
-## Para pensar. Ejercicio 7 · Nombre variavles y CamelCase
+## Para pensar. Ejercicio 7 · Nombre variables y CamelCase
 **Explicación.** Para que un código sea entendible tenemos que ser específicos con los nombres de las variables y olvidarnos lo de querer ahorrar líneas sacrificando el acortar código. debemos pensar que es muy raro que trabajemos solos en proyectos, y nuestro código será leído por más personas, por lo que tiene que quedar claro qué es cada cosa.
 
 Eso no nos quita de que escribamos como nos dé la gana, existen convenciones para nombrar variables, clases, proyectos, nombres de archivos... A las variables las trabajaremos con CamelCase, que es el formato donde la variable empezará en minúscula y si es una palabra compuesta por dos o más éstas se unirán empezando por su primera letra en mayúsucula a la variable.
@@ -133,4 +133,19 @@ let nombreEmpleado = "Ana";
 let edadEmpleado= 30;
 let deBaja = true;
 let salarioBase = 1250.5;
+```
+
+## Reto. Ejercicio 8 · Diferencia ámbito de `var` contra `let`
+**Explicación.** Cuando usamos `var`, que ya queda anticuado y no debemos recomendar su uso, su salida será `3 3 3`, esto sucede porque `var` siemrpe tendrá un ámbito global dando igual que lo cerremos en ámbitos o bloques de `{}`, así que en éste caso con el `setTimeout` que retrasa la salida, lee el valor final de i que es 3 (última comprobación) y por eso sacará lo que hemos mencionado.
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+} // Salida: 3 3 3
+```
+
+Con `let`, que si tiene ámbito de bloque, si se guardará en memoria el valor en cada vuelta del bucle (iteración) y la salida será `0 1 2` y por ello si conservará su valor cuando se muestre.
+```js
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+}  // Salida: 0 1 2
 ```

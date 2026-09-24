@@ -102,3 +102,17 @@ let salarioBase = 1250.5;
 
 console.log(`Empleado: ${nombreEmpleado}\nEdad: ${edadEmpleado}\n¿De baja? ${deBaja}\nSalario Base: ${salarioBase}`)
 
+/* Reto. Ejecuta este fragmento tal cual. setTimeout solo retrasa el 
+console.log, no necesitas entenderlo todavía.
+Anota qué imprime. Cambia var por let, vuelve a ejecutar y anota la 
+nueva salida. Explica en un comentario, usando lo que has visto sobre 
+ámbito de bloque, por qué cambia el resultado.
+*/
+console.log("\nReto:");
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+} // Salida: 3 3 3
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 0);
+}  // Salida: 0 1 2
