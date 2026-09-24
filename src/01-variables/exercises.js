@@ -74,3 +74,12 @@ let x = 1;
   console.log(x); // Aquí valdrá 2 porque vive en el ámbito, las {}
 }
 console.log(x); // Aquí valdrá 1 porque la x del ámbito muere al cerrarse
+
+/* Para pensar. 6. Predice de nuevo y explica en un comentario por qué la 
+última línea falla si lista es una constante.
+*/
+console.log("\nPara pensar. Ejercicio 6:");
+const lista = [1, 2];
+lista.push(3);
+console.log(lista);
+// lista = []; // Va a fallar por intentar tocar la referencia de memoria siendo const

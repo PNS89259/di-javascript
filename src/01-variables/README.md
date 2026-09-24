@@ -101,3 +101,16 @@ console.log(x);
 La x de la primera que está dentro de las `{}` tendrá valor 2 que se le da en su inicialización dentro del propio ámbito.
 
 Para la x de la última línea, su valor será 1 que es el valor que se le da en la primera línea, y aunque el ámbito está en medio de ambas su ciclo de vida se acaba y no va afectar el valor que se dió dentro, por eso no afecta al valor inicial anterior.
+
+## Para pensar. Ejercicio 6 · Referencia
+**Explicación.** Aquí tocamos el concepto de referencia y lo que sucede en la memoria.
+```js
+const lista = [1, 2];
+lista.push(3);
+console.log(lista);
+lista = [];
+```
+
+El array de la primera línea lo declaramos como constante, y el array se guarda como referencia, que es un enlace en la memoria, y será éste enlace lo que será inmutable. Dicho ésto, lo que sucede en las líneas 2 y 3 es algo que sí podemos hacer, ya que el contenido del array sí puede ser modificado porque no modifica el enlace que mencionamos, sólo su contenido.
+
+Ahora, la última línea si está intentando modificar la referencia, el enlace a la memoria, y como es una constante y es inmutable nos saltará error.
