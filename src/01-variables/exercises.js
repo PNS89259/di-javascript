@@ -63,3 +63,14 @@ a partir de las otras variables. */
 const precioFinal = precioBase + (precioBase * iva);
 
 console.log(`Precio final: ${precioFinal}`);
+
+/* Para penar. 5. Predice qué imprime este código antes de ejecutarlo. 
+Escribe tu predicción en un comentario y compárala con la consola.
+*/
+console.log("\nPara pensar. Ejercicio 5:");
+let x = 1;
+{
+  let x = 2;
+  console.log(x); // Aquí valdrá 2 porque vive en el ámbito, las {}
+}
+console.log(x); // Aquí valdrá 1 porque la x del ámbito muere al cerrarse

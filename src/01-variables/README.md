@@ -84,3 +84,20 @@ const precioFinal = precioBase + (precioBase * iva);
 
 console.log(`Precio final: ${precioFinal}`);
 ```
+
+## Para pensar. Ejercicio 5 · Ámbitos
+**Explicación.** Debemos conocer el alcance que realizan los ámbitos, que son los bloques de código que están limitados por las `{}`.
+
+Entonces, para éste código:
+```js
+let x = 1;
+{
+  let x = 2;
+  console.log(x);
+}
+console.log(x);
+```
+
+La x de la primera que está dentro de las `{}` tendrá valor 2 que se le da en su inicialización dentro del propio ámbito.
+
+Para la x de la última línea, su valor será 1 que es el valor que se le da en la primera línea, y aunque el ámbito está en medio de ambas su ciclo de vida se acaba y no va afectar el valor que se dió dentro, por eso no afecta al valor inicial anterior.
