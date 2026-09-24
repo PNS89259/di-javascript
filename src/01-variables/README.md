@@ -69,7 +69,7 @@ Pero tenemos que aprender que éstos datos si quedan preparados para usarse y ya
 ## Ejercicio 4 · Justificación entre `let` y `const`
 **Explicación.** Aquí tenemos que aprender que no todo siempre va a ser normas estrictas. Debemos pensar la lógica de lo que vamos a escribir. 
 
-En este caso el precio base se nos viene dado y lo usaremos en operaciones en las que no se va a modificar, por lo que lo declaramos como `const.`. De la misma manera, el IVA será un valor que no varía en los cálcular, también `const`. Y por último, el precio final es una opración que tampoco vamos a tocar en el código, así que otra `const`. Por lo tanto, vemos tres conceptos donde aplicar constantes.
+En este caso el precio base se nos viene dado y lo usaremos en operaciones en las que no se va a modificar, por lo que lo declaramos como `const`. De la misma manera, el IVA será un valor que no varía en los calculos, también `const`. Y por último, el precio final es una opración que tampoco vamos a tocar en el código, así que otra `const`. Por lo tanto, vemos tres conceptos donde aplicar constantes.
 
 ```js
 /* Uso const uno por el valor fijo del enunciado, y dos porque si debiera
@@ -100,7 +100,7 @@ console.log(x);
 
 La x de la primera que está dentro de las `{}` tendrá valor 2 que se le da en su inicialización dentro del propio ámbito.
 
-Para la x de la última línea, su valor será 1 que es el valor que se le da en la primera línea, y aunque el ámbito está en medio de ambas su ciclo de vida se acaba y no va afectar el valor que se dió dentro, por eso no afecta al valor inicial anterior.
+Para la x de la última línea, su valor será 1 que es el valor que se le da en la primera línea, y aunque el ámbito que está en medio de ambas su ciclo de vida se acaba y no va afectar el valor que se le dió dentro, por eso no afecta al valor inicial anterior.
 
 ## Para pensar. Ejercicio 6 · Referencia
 **Explicación.** Aquí tocamos el concepto de referencia y lo que sucede en la memoria.
@@ -118,7 +118,7 @@ Ahora, la última línea si está intentando modificar la referencia, el enlace 
 ## Para pensar. Ejercicio 7 · Nombre variables y CamelCase
 **Explicación.** Para que un código sea entendible tenemos que ser específicos con los nombres de las variables y olvidarnos lo de querer ahorrar líneas sacrificando el acortar código. debemos pensar que es muy raro que trabajemos solos en proyectos, y nuestro código será leído por más personas, por lo que tiene que quedar claro qué es cada cosa.
 
-Eso no nos quita de que escribamos como nos dé la gana, existen convenciones para nombrar variables, clases, proyectos, nombres de archivos... A las variables las trabajaremos con CamelCase, que es el formato donde la variable empezará en minúscula y si es una palabra compuesta por dos o más éstas se unirán empezando por su primera letra en mayúsucula a la variable.
+Eso no nos quita de que escribamos como nos dé la gana, existen convenciones para nombrar variables, clases, proyectos, nombres de archivos... Las variables las trabajaremos con CamelCase, que es el formato donde la variable empezará en minúscula y si es una palabra compuesta por dos o más éstas se unirán empezando por su primera letra en mayúscula a la variable.
 
 Para el ejemplo del ejercicio, me he basado en los datos que tendría una empresa sobre sus empleados, comparemos las diferencias:
 ```js
@@ -143,7 +143,7 @@ for (var i = 0; i < 3; i++) {
 } // Salida: 3 3 3
 ```
 
-Con `let`, que si tiene ámbito de bloque, si se guardará en memoria el valor en cada vuelta del bucle (iteración) y la salida será `0 1 2` y por ello si conservará su valor cuando se muestre.
+Con `let`, que si tiene ámbito de bloque, si se guardará en memoria el valor en cada vuelta del bucle (iteración) y la salida será `0 1 2` y por ello sí conservará su valor cuando se muestre.
 ```js
 for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 0);
